@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>Lmodel: {{ content.0.lmodel }}</p>
+<p>Type: {{ type.0.type }}</p>
+<p>Resolution: {{ reso.0.resolution }}</p>
+<p>Weight: {{ weight.0.weight }}</p>
+<img src="http://ecx.images-amazon.com/images/I/716Qo9TI0iL._SL1500_.jpg" width="400" height="300">
+<p>Reviews:</p>
+<p>{{ revi1.0.description }}</p>
+<p>{{ revi2.0.description }}</p>
+{% for p in pair %}
+<p>{{ p }}</p>
+    {% if 'amaz' in p.1.url %}
+    <p><a href="http://www.amazon.com/Dell-XPS15-6845sLV-15-6-Inch-Touchscreen-Processor/dp/B00JXLGECA/ref=sr_1_2?s=pc&ie=UTF8&qid=1447317546&sr=1-2&keywords=xps+15">Click to Amazon</a></p>
+    {% endif %}
+    {% if 'ebay' in p.1.url %}
+    <p><a href="http://www.ebay.com/itm/Asus-K501LX-EB71-15-6-Gaming-Laptop-3-0-GHz-Core-i7-5th-8-GB-256-GB-SSD-950M-/351552994082?hash=item51da30fb22:g:eOYAAOSwl9BWIoep">Click to ebay</a></p>
+    {% endif %}
+    {% if 'tiger' in p.1.url %}
+    <p><a href="http://www.tigerdirect.com/applications/SearchTools/item-details.asp?EdpNo=9781103&CatId=4935">Click to Tigerdirect</a></p>
+    {% endif %}
+{% endfor %}
+<form method="get" action="">
+<label for="id_q">Write Review:</label>
+           <input type="text" name="q" id="id_q"/>
+           <input type="submit" value="Push"/>
+
+
+        </form>
+<p>You may also like:</p>
+<a href="http://127.0.0.1:8000/k501lx">ASUS K501LX</a>
+<a href="http://127.0.0.1:8000/compare/">Click to compare</a>
+</body>
+</html>

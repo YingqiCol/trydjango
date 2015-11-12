@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Compare Models</title>
+    <form method="get" action="">
+
+
+<label for="id_q">Model:</label>
+           <input type="text" name="q" id="id_q"/>
+           <input type="text" name="p" id="id_p"/>
+           <input type="submit" value="Submit"/>
+</form>
+    <p>Comparation Result:</p>
+<p>Model: {{ lap1.0.lmodel }}      -----VS-----   {{ lap2.0.lmodel }}</p>
+    <p>CPU: {{ cpu1.0.cmodel }}-----VS-----{{ cpu2.0.cmodel }}</p>
+    <p>GPU:{{ gpu1.0.gmodel }}-----VS-----{{ gpu2.0.gmodel }}</p>
+    <p>HardDisk:{{ hd1.0.hmodel }}-----VS-----{{ hd2.0.hmodel }}</p>
+</head>
+<body>
+
+</body>
+</html>

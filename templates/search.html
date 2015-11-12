@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+<form method="get" action="/search/">
+
+
+<label for="id_q">Search:</label>
+           <input type="text" name="q" id="id_q"/>
+           <input type="submit" value="Submit"/>
+
+
+        </form>
+<p>News:</p>
+<a href="http://www.theverge.com/2015/11/11/9711138/dell-xps-12-alienware-steam-machine-available">Dell's XPS 12 magnetic laptop hybrid is now on sale</a><br>
+<a href="http://www.businessinsider.com/apple-ceo-tim-cook-calls-microsoft-surface-book-laptop-deluded-2015-11">Apple CEO Tim Cook slams Microsoft's first laptop</a><br>
+<a href="http://www.zdnet.com/article/best-buy-black-friday-2015-laptop-desktop-ipad-deals-include-99-chromebook/">Best Buy Black Friday 2015 laptop, desktop, iPad deals include $99 Chromebook</a><br>
+You searched for "{{ query_string }}" and the results are listed below.
+
+    {% for c in found_entries %}
+           <p><a href="http://127.0.0.1:8000/k501lx/"> {{ c }}</a></p>
+    {% endfor %}
+</head>
+<body>
+
+</body>
+</html>
